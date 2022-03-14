@@ -6,7 +6,7 @@ import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
 import "./Chat.css";
 
-const ENDPOINT = "https://protected-earth-55460.herokuapp.com/";
+const ENDPOINT = "http://localhost:5000/";
 
 let socket;
 
@@ -30,7 +30,7 @@ const Chat = ({ location }) => {
                 alert(error);
             }
         });
-    }, [location.search]);
+    }, [ENDPOINT, location.search]);
 
     useEffect(() => {
         socket.on("message", (message) => {
@@ -57,6 +57,7 @@ const Chat = ({ location }) => {
                 <Messages messages={messages} name={name} />
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
+            {/* <TextContainer users={users} /> */}
         </div>
     );
 };
