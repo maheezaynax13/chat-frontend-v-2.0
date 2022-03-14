@@ -11,7 +11,7 @@ export default function SignIn() {
     return (
         <div>
             <div className='w-50 mt-5' style={{ position: "absolute", top: 0, left: "25%" }}>
-                <Alert variant='success' onClose={() => setShow(false)} dismissible>
+                <Alert variant='success'>
                     <Alert.Heading className='text-center'>This App Is Made By Jahidun Nur Mahee</Alert.Heading>
                     <p className='text-center'>You can chat with any one with specific room name!</p>
                 </Alert>
